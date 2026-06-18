@@ -34,5 +34,5 @@ So there is nothing to lie to, and nothing to lie *with*. The moment a run drift
 
 ---
 
-<sub>🤝 **[claude-kit](https://github.com/zzallirog/claude-kit)** — a Claude Code starter kit built on the same instinct. Trust the trace, not the claim: run `git hash-object <file>` on both sides — same digest, same map.</sub>
+<sub>🤝 **[claude-kit](https://github.com/zzallirog/claude-kit)** — a Claude Code starter kit built on the same instinct: trust the trace, not the claim.</sub>
 

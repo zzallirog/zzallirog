@@ -6,10 +6,28 @@
 
 ---
 
-An agent tells you what it did. It might even believe it.
+Any agent can tell you what it did. The catch: the same code that *acts* is the code that *writes the report* — so the report is the one record you can't use to check the act. The only honest account comes from watching the agent from a place it can't reach. The network is that place.
 
-But the process that *acts* is the same one that *writes the report* — so the report is the one thing you can't use to check the act. You watch the wire instead.
+```
+   +------------------------------------------+
+   |  CLAIM   "/tmp only, https, work hours"  |
+   +------------------------------------------+
+        |
+        |  do they match?
+        v
+   +------------------------------------------+
+   |  TRACE   unknown host, port 4444, 04:00  |
+   +------------------------------------------+
 
-The boundaries are set below where an agent can argue with them: guardrails enforced at the filesystem, not promised in a prompt. The watch runs one way — it sees out; nothing the agent does reaches back to bend it — and it is never told when it is being read. So there is nothing to deceive, and nothing to deceive *with*. Let it try to slip — a path it shouldn't take, a port it never uses, an hour off its schedule — and the metadata already holds it.
+   the trace can't be rewritten. that's the one you trust.
+```
 
-**[provable-observability](https://github.com/zzallirog/provable-observability)** is where that watch becomes continuous and falsifiable: every hour, the network asserts it is still observable. The rhythm is the proof; a broken rhythm is the alarm.
+Three things make the trace impossible to fake:
+
+- **Guardrails live in the filesystem, not the prompt.** The agent runs *inside* limits it can't talk its way out of — not rules it is politely asked to follow.
+- **The watch is a one-way mirror.** Every packet is recorded before it leaves; nothing the agent does reaches back to edit what was already seen.
+- **It is never told when it's watched.** No blind spot to wait for — so no safe moment to cheat.
+
+So there is nothing to lie to, and nothing to lie *with*. The moment a run drifts — a host it shouldn't reach, a port it never uses, an hour off its schedule — the metadata already holds the proof.
+
+**[provable-observability](https://github.com/zzallirog/provable-observability)** turns that watch into a continuous, falsifiable signal: every hour, the network asserts it is still observable. The rhythm is the proof; a broken rhythm is the alarm.

@@ -31,3 +31,4 @@ Three things make the trace impossible to fake:
 So there is nothing to lie to, and nothing to lie *with*. The moment a run drifts — a host it shouldn't reach, a port it never uses, an hour off its schedule — the metadata already holds the proof.
 
 **[provable-observability](https://github.com/zzallirog/provable-observability)** turns that watch into a continuous, falsifiable signal: every hour, the network asserts it is still observable. The rhythm is the proof; a broken rhythm is the alarm.
+

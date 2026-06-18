@@ -32,3 +32,7 @@ So there is nothing to lie to, and nothing to lie *with*. The moment a run drift
 
 **[provable-observability](https://github.com/zzallirog/provable-observability)** turns that watch into a continuous, falsifiable signal: every hour, the network asserts it is still observable. The rhythm is the proof; a broken rhythm is the alarm.
 
+---
+
+<sub>🤝 **[claude-kit](https://github.com/zzallirog/claude-kit)** — a Claude Code starter kit built on the same instinct. Trust the trace, not the claim: run `git hash-object <file>` on both sides — same digest, same map.</sub>
+
